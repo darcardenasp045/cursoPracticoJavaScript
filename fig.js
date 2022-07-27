@@ -54,7 +54,7 @@ console.log("El diametro del circulo es : " + diametroCirculo + "cm");
 //PI
 
 const PI = Math.PI;
-console.log(" PI es : " + PI );
+console.log("PI es : " + PI );
 
 
 //Circunferencia
