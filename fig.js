@@ -1,78 +1,127 @@
-//Codigo del cuadrado
+    //Iniciamos variables, cajas de texto y botones.
 
-console.group("Cudrados");
+    var valor, perimetroCu, areaCu, ladoA, ladoB, ladoBase, perimetroTri, ba, alturaTri, alturaTriangulo, ra, rad, perimetroCir, areaCir;
+    var PI = Math.PI;
+    var resultado = document.querySelector("resultado");
+    var respuesta = document.getElementById("respuesta");
+    var resultado1 = document.querySelector("resultado1");
+    var respuesta1 = document.getElementById("respuesta1");
+    var resultado2 = document.querySelector("resultado2");
+    var respuesta2 = document.getElementById("respuesta2");
+    var cuadPer = document.getElementById("perimetro");
+    cuadPer.addEventListener("click",calcularPerimetroCuadrado);
+    var cuadAr = document.getElementById("area");
+    cuadAr.addEventListener("click",calcularAreaCuadrado);
+    var triPer = document.getElementById("perimetro1");
+    triPer.addEventListener("click",calcularPerimetroTriangulo);
+    var triAre = document.getElementById("area1");
+    triAre.addEventListener("click",calcularAreaTriangulo);
+    var circPer = document.getElementById("perimetro2");
+    circPer.addEventListener("click",calcularPerimetroCirculo);
+    var circAr = document.getElementById("area2");
+    circAr.addEventListener("click",calcularAreaCirculo);
+    
+    //Codigo del cuadrado
 
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden : " + ladoCuadrado + "cm");
+    //Creamos la formula matematica 
 
-const perimetroCuadrado = ladoCuadrado*4;
-console.log("El perimetro cuadrado es: " + perimetroCuadrado + "cm");
+    function perimetroCuadrado(lado){
+       
+        return lado * 4;
+    }
+           
+    function areaCuadrado(lado){
+         
+        return lado * lado;
+    }
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log("El area del cuadrado es: " + areaCuadrado + "cm^2");
+    //creamos las funciones para disparar los OnClicks
+    
+    function calcularPerimetroCuadrado(){
+        var l = document.getElementById("lados");
+        valor= parseInt(l.value);
+        perimetroCu = perimetroCuadrado(valor);
+        respuesta.innerHTML = perimetroCu;
+        
+    }
 
-console.groupEnd();
+    function calcularAreaCuadrado(){
+        var l = document.getElementById("lados");
+        valor= parseInt(l.value);
+        areaCu = areaCuadrado(valor);
+        respuesta.innerHTML = areaCu;
+        
+    }
 
-//Codigo del Triangulo
+ //Codigo Triangulo
 
-console.group("Triangulos");
+    //Creamos la formula matematica 
 
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
+    function perimetroTriangulo(lado1, lado2, base){
+        return lado1 +lado2 + base;
+    }
 
-console.log("Los lados del triangulo miden: " + ladoTriangulo1 + "cm, " + ladoTriangulo2 + "cm, y " + baseTriangulo + "cm ");
+   
+    function areaTriangulo(base, altura){
+        return (base * altura) / 2;
 
-const alturaTriangulo = 5.5;
-console.log("La altura del triangulo mide : " + alturaTriangulo + "cm");
+    }
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo ;
-console.log("El perimetro del triangulo mide : " + perimetroTriangulo + "cm");
+    //creamos las funciones para disparar los OnClicks
 
-const areaTriangulo = (baseTriangulo * alturaTriangulo)/2;
-console.log("El area del triangulo es : " + areaTriangulo + "cm^2");
+    function calcularPerimetroTriangulo(){
+        var l1 = document.getElementById("lado1");
+        ladoA= parseInt(l1.value);
+        var l2 = document.getElementById("lado2");
+        ladoB= parseInt(l2.value);
+        ba = document.getElementById("base");
+        ladoBase= parseInt(ba.value);
+        perimetroTri = perimetroTriangulo(ladoA, ladoB, ladoBase);
+        respuesta1.innerHTML = perimetroTri;
+        
+    }
 
-
-console.groupEnd();
-
+    function calcularAreaTriangulo(){
+        ba = document.getElementById("base");
+        ladoBase= parseInt(ba.value);
+        var al = document.getElementById("altura");
+        alturaTri= parseInt(al.value)
+        alturaTriangulo = areaTriangulo(ladoBase, alturaTri);
+        respuesta1.innerHTML = alturaTriangulo;
+        
+    }
+   
 //Codigo Circulos
 
-console.group("Circulos");
+    //Creamos la formula matematica 
 
+    function diametroCirculo (radio){
+        return radio *2 ;
+    }
+        
+    function perimetroCirculo(radio){
+        const diametro = diametroCirculo(radio);
+        return diametro * PI;
+    }
+    
+    function areaCirculo(radio){
+        return (radio * radio) * PI;
+    }
 
-//radio
+    //creamos las funciones para disparar los OnClicks
 
-const radioCirculo = 4;
-console.log("El radio del circulo es : " + radioCirculo + "cm");
+    function calcularPerimetroCirculo(){
+        ra = document.getElementById("radio");
+        rad= parseInt(ra.value);
+        perimetroCir= perimetroCirculo(rad);
+        respuesta2.innerHTML = perimetroCir;
+    }
 
-
-//diametro
-
-const diametroCirculo = radioCirculo * 2;
-console.log("El diametro del circulo es : " + diametroCirculo + "cm");
-
-//PI
-
-const PI = Math.PI;
-console.log("PI es : " + PI );
-
-
-//Circunferencia
-
-const perimetroCirculo = diametroCirculo * PI;
-console.log("La circunferencia del circulo es : " + perimetroCirculo + "cm");
-
-//Area 
-
-const areaCirculo = (radioCirculo * radioCirculo) * PI;
-console.log("El area del circulo es : " + areaCirculo + "cm^2");
-
-
-
-
-
-
-
-console.groupEnd();
+    function calcularAreaCirculo(){
+        ra = document.getElementById("radio");
+        rad= parseInt(ra.value);
+        areaCir= areaCirculo(rad);
+        respuesta2.innerHTML = areaCir;
+    }
 
 
