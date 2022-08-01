@@ -1,0 +1,39 @@
+.contenedor{
+    display: grid; 
+    grid-template-columns: 0.5fr 0.5fr 0.5fr; 
+    grid-template-rows: 0.5fr 0.5fr ; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ".titulo. "
+    "cuadrado triangulo circulo"
+  ; 
+}
+.titulo { 
+    display: grid;
+    grid-area: titulo;
+    justify-items: center;
+    align-content: space-evenly; 
+}
+.cuadrado { 
+    display: grid;
+    grid-area: cuadrado; 
+    justify-items: center;
+    align-content: space-evenly;
+}
+.triangulo { 
+    display: grid;
+    justify-items: center;
+    align-content: space-evenly;
+    grid-area: triangulo; 
+}
+.circulo { 
+    display: grid;
+    justify-items: center;
+    align-content: space-evenly;
+    grid-area: circulo; 
+}
+
+
+.contenedor img{
+    width: 30px;
+}
