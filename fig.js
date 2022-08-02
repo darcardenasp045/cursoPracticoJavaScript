@@ -1,6 +1,6 @@
     //Iniciamos variables, cajas de texto y botones.
 
-    var valor, perimetroCu, areaCu, ladoA, ladoB, ladoBase, perimetroTri, ba, alturaTri, alturaTriangulo, ra, rad, perimetroCir, areaCir;
+    var valor, perimetroCu, areaCu, ladoA, ladoB, ladoBase, perimetroTri, ba, alturaTri, alturaTriIsos, alturaTriangulo, ra, rad, perimetroCir, areaCir;
     var PI = Math.PI;
     var resultado = document.querySelector("resultado");
     var respuesta = document.getElementById("respuesta");
@@ -20,6 +20,8 @@
     circPer.addEventListener("click",calcularPerimetroCirculo);
     var circAr = document.getElementById("area2");
     circAr.addEventListener("click",calcularAreaCirculo);
+    var triAltu = document.getElementById("alturaIso");
+    triAltu.addEventListener("click",calcularAlturaTrianguloIsosceles);
     
     //Codigo del cuadrado
 
@@ -67,6 +69,14 @@
 
     }
 
+    function alturaTrianguloIsosceles(lado1, lado2){
+         
+        return Math.sqrt((lado1*lado1)-(lado2*lado2));
+         
+    }
+
+    console.log(alturaTrianguloIsosceles);
+
     //creamos las funciones para disparar los OnClicks
 
     function calcularPerimetroTriangulo(){
@@ -89,6 +99,16 @@
         alturaTriangulo = areaTriangulo(ladoBase, alturaTri);
         respuesta1.innerHTML = alturaTriangulo;
         
+    }
+
+    function calcularAlturaTrianguloIsosceles(){
+        var l1 = document.getElementById("lado1");
+        ladoA= parseInt(l1.value);
+        var l2 = document.getElementById("lado2");
+        ladoB= parseInt(l2.value);
+        alturaTriIsos = alturaTrianguloIsosceles(ladoA, ladoB);
+        respuesta1.innerHTML = alturaTriIsos;
+
     }
    
 //Codigo Circulos
