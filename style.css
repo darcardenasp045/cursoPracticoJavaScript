@@ -1,36 +1,109 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body{
+    font-family: 'Cinzel', serif;
+
+}
 .contenedor{
     display: grid; 
     grid-template-columns: 0.5fr 0.5fr 0.5fr; 
     grid-template-rows: 0.5fr 0.5fr ; 
-  gap: 0px 0px; 
-  grid-template-areas: 
+    gap: 0px 0px; 
+     grid-template-areas: 
     ".titulo. "
-    "cuadrado triangulo circulo"
-  ; 
+    "cuadrado triangulo circulo";
+   
 }
 .titulo { 
     display: grid;
     grid-area: titulo;
     justify-items: center;
     align-content: space-evenly; 
+    border: 5px solid black;
+    border-bottom: 5px;
+    border-radius: 15px;
+    border-top: 5px;
 }
+
 .cuadrado { 
+    border-radius: 20px;
+    border: 2px solid black;
     display: grid;
     grid-area: cuadrado; 
     justify-items: center;
     align-content: space-evenly;
+    margin-right: 15px;
 }
+.cuadrado :nth-child(4){
+     
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+        color: #ffffff; 
+        font-size: 18px; 
+        font-weight: 400; 
+        text-align: center; 
+        background: #889ccf; 
+        margin: 0 0 25px; 
+        overflow: hidden; 
+        padding: 20px; 
+        border-radius: 35px 0px 35px 0px; 
+       
+        border: 2px solid #5878ca;
+
+}
+.cuadrado :nth-child(5){
+    font-family: 'Cinzel', serif;
+
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: 3px;
+    color: var(--white);
+    width: 50%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+.cuadrado :nth-child(6){
+    font-family: 'Cinzel', serif;
+
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: 3px;
+    color: var(--white);
+    width: 50%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
 .triangulo { 
+    border: 2px solid black;
+    border-radius: 20px;
     display: grid;
     justify-items: center;
     align-content: space-evenly;
     grid-area: triangulo; 
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px
 }
 .circulo { 
+    border: 2px solid black;
+    border-radius: 20px;
     display: grid;
     justify-items: center;
     align-content: space-evenly;
-    grid-area: circulo; 
+    grid-area: circulo;
+    margin-left: 15px; 
 }
 
 
