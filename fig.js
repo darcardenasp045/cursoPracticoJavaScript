@@ -43,7 +43,7 @@
         var l = document.getElementById("lados");
         valor= parseInt(l.value);
         perimetroCu = perimetroCuadrado(valor);
-        respuesta.innerHTML = perimetroCu;
+        respuesta.innerHTML = perimetroCu + " Cm";
         
     }
 
@@ -69,13 +69,31 @@
 
     }
 
-    function alturaTrianguloIsosceles(lado1, lado2){
-         
-        return Math.sqrt((lado1*lado1)-(lado2*lado2));
-         
-    }
 
-    console.log(alturaTrianguloIsosceles);
+         
+    function alturaTrianguloIsosceles(trilado1, trilado2, triaLadoBase) {
+
+        if (trilado1 != trilado2) {
+
+           alert("Los lados no son iguales!");
+
+            } else {
+
+                var triPeqLad2 = triaLadoBase / 2;
+                var triPeqLadBase = trilado1;
+        
+                var triPeqLado2Cuad = triPeqLad2 * triPeqLad2;
+                var triPeqLadoBaseCuad = triPeqLadBase * triPeqLadBase;
+        
+                var trianguloPequenoLadoA = Math.sqrt(triPeqLadoBaseCuad - triPeqLado2Cuad);
+        
+                return trianguloPequenoLadoA;
+                 
+            }
+        }
+       
+
+  
 
     //creamos las funciones para disparar los OnClicks
 
@@ -106,7 +124,9 @@
         ladoA= parseInt(l1.value);
         var l2 = document.getElementById("lado2");
         ladoB= parseInt(l2.value);
-        alturaTriIsos = alturaTrianguloIsosceles(ladoA, ladoB);
+        ba = document.getElementById("base");
+        ladoBase= parseInt(ba.value);
+        alturaTriIsos = alturaTrianguloIsosceles(ladoA, ladoB, ladoBase);
         respuesta1.innerHTML = alturaTriIsos;
 
     }
