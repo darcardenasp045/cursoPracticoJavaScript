@@ -52,7 +52,7 @@ body{
 .cuadrado :nth-child(4){
      
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-    color: #ffffff; 
+    color:black; 
     font-size: 18px; 
     font-weight: 200; 
     text-align: center; 
@@ -102,7 +102,7 @@ body{
 
 .triangulo :nth-child(5), :nth-child(7), :nth-child(9), :nth-child(11) {
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-    color: #ffffff; 
+    color:black; 
     font-size: 18px; 
     font-weight: 200; 
     text-align: center; 
@@ -139,7 +139,7 @@ body{
 
 .circulo :nth-child(4){
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-    color: #ffffff; 
+    color: black; 
     font-size: 18px; 
     font-weight: 200; 
     text-align: center; 
