@@ -15,8 +15,8 @@ body{
 .contenedor{
     display: grid; 
     grid-template-columns: 0.5fr 0.5fr 0.5fr; 
-    grid-template-rows: 0.5fr 0.5fr ; 
-    gap: 0px 0px; 
+    grid-template-rows: -0.5fr 0.5fr ; 
+    
      grid-template-areas: 
     ".titulo. "
     "cuadrado triangulo circulo";
