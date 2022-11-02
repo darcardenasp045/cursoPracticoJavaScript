@@ -22,10 +22,12 @@
     circAr.addEventListener("click",calcularAreaCirculo);
     var triAltu = document.getElementById("alturaIso");
     triAltu.addEventListener("click",calcularAlturaTrianguloIsosceles);
-    
+  
     //Codigo del cuadrado
 
     //Creamos la formula matematica 
+   
+
 
     function perimetroCuadrado(lado){
        

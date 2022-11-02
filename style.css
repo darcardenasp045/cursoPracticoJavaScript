@@ -12,7 +12,7 @@ body{
     font-family: 'Cinzel', serif;
 
 }
-.contenedor{
+/* .contenedor{
     display: grid; 
     grid-template-columns: 0.5fr 0.5fr 0.5fr; 
     grid-template-rows: 0.5fr 0.5fr ; 
@@ -21,7 +21,7 @@ body{
     ".titulo. "
     "cuadrado triangulo circulo";
    
-}
+} */
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
