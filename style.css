@@ -22,6 +22,25 @@ body{
     "cuadrado triangulo circulo";
    
 } */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:rgb(128, 127, 139);
+    height: 50px;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 8px;
+    
+    
+}
+a:-webkit-any-link {
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 10px;
+
+}
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
